@@ -44,11 +44,14 @@ defmodule BeelineAppsignal.MixProject do
 
   defp deps do
     [
+      {:beeline, path: "../beeline", optional: true},
+      {:appsignal, "~> 1.0 or ~> 2.0"},
       # docs
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       # test
-      {:bless, "~> 1.0"},
-      {:convene, "~> 0.2", organization: "cuatro", only: [:dev, :test]},
+      {:bless, "~> 1.0", only: :test},
+      {:mox, "~> 1.0", only: :test},
+      {:credo, "~> 1.0", only: :test},
       {:excoveralls, "~> 0.7", only: :test}
     ]
   end
@@ -58,7 +61,6 @@ defmodule BeelineAppsignal.MixProject do
       name: "beeline_appsignal",
       files: ~w(lib .formatter.exs mix.exs README.md .version),
       licenses: [],
-      organization: "cuatro",
       links: %{
         "GitHub" => @source_url,
         "Changelog" => @source_url <> "/blobs/main/CHANGELOG.md"
