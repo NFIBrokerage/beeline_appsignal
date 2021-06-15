@@ -1,3 +1,3 @@
-defmodule BeelineAppsignalTest do
+defmodule Beeline.AppsignalTest do
   use ExUnit.Case
 end
