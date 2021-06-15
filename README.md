@@ -4,6 +4,11 @@
 
 an Appsignal.io exporter for Beeline telemetry
 
+This exporter publishes the difference between the latest event number in a
+producer's stream and the current stream position of the producer. This can
+be used to create graphs and anomaly triggers in Appsignal to notify you
+when a producer falls behind.
+
 ## Installation
 
 ```elixir
