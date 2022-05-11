@@ -44,8 +44,8 @@ defmodule BeelineAppsignal.MixProject do
 
   defp deps do
     [
-      {:appsignal, "~> 1.0 or ~> 2.0"},
-      {:beeline, "~> 0.1", optional: true},
+      {:appsignal, "~> 2.0 or ~> 1.0"},
+      {:beeline, "~> 1.0 or ~> 0.1", optional: true},
       # docs
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       # test
