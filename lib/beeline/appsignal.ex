@@ -36,7 +36,7 @@ defmodule Beeline.Appsignal do
     to which the delta should be published
   """
 
-  @appsignal Application.get_env(:beeline_appsignal, :appsignal, Appsignal)
+  @appsignal Application.compile_env(:beeline_appsignal, :appsignal, Appsignal)
 
   use Task
 
